@@ -4,9 +4,9 @@ title: About
 permalink: /about
 ---
 
-I work with data platforms and investment data.
+I work with data platforms and investment data, currently at (NBIM)[https://www.nbim.no].
 
-Interested in how data shapes the future.
+Interested in how data and AI shapes the future.
 
 Also interested in home lab, self-hosting and Home Assistant to name a few.
 
