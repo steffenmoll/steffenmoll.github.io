@@ -15,10 +15,10 @@ layout: default
   </content>
 </article>
 
-{% if site.show_backlinks %}
+{% if site.show_backlinks and page.backlinks.size > 0 %}
 <div id="notes-entry-container" style="font-size: 0.9em">
-  <h3 style="margin-bottom: 1em">Notes mentioning this note</h3>
-  {% if page.backlinks.size > 0 %}
+  <h3 style="margin-bottom: 1em">Related</h3>
+
   <div style="display: grid; grid-gap: 1em; grid-template-columns: repeat(1fr);">
   {% for backlink in page.backlinks %}
     <div class="backlink-box">
@@ -27,14 +27,7 @@ layout: default
     </div>
   {% endfor %}
   </div>
-  {% else %}
-
-  <div style="font-size: 0.9em">
-    <p>
-      There are no notes linking to this note.
-    </p>
-  </div>
-  {% endif %}
+  
 </div>
 {% endif %}
 
