@@ -4,6 +4,7 @@ $color-subtext: hsl(0, 0%, 30%);
 $color-border: hsl(0, 0%, 85%);
 $color-box-background: mix($color-primary, white, 4%);
 $border-radius: 4px;
+$max-width: 700px;
 $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
   sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 
@@ -16,7 +17,7 @@ body {
   overflow-x: hidden;
   color: $color-text;
   font-size: 1rem;
-  max-width: 63em;
+  max-width: $max-width;
 
   @media (min-width: 820px) {
     font-size: 1.2rem;
@@ -104,11 +105,6 @@ a {
 
 nav {
   margin: 1em 0 3em;
-}
-
-article.note {
-  max-width: 700px;
-  margin: 0 auto;
 }
 
 #notes-entry-container {
