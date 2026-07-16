@@ -48,21 +48,22 @@ Angle: grounded, example-driven follow-up — what does dealing with the scaling
 Key points:
 - Is bronze/silver/gold (e.g. Matillion's medallion pattern) practically sufficient, or does it fall short in practice?
 - NBIM as a reference case: raw → int → mrt, with dbt
-- Underlying platform rot gets worse — and more visible — once AI gets layered on top of it
 
-Avoid: keep this concrete and example-led, it's the payoff post after three posts of framing.
+Avoid: keep this concrete and example-led, it's the payoff post after three posts of framing. Don't get into the AI angle here — that's post 5.
 
-### Post 5: How do you actually choose the right dataset in the first place? — status: drafted
+### Post 5: AI doesn't fix your data problems, it amplifies them — status: drafted
 
-Angle: the series' problems, experienced firsthand at the exact moment someone tries to use the platform — picking between several plausible, similarly-named tables with no visible way to tell which one is trustworthy.
+Angle: layering AI (copilots, agents, natural-language analytics) on top of a platform doesn't fix the underlying data problems from posts 1–4, it removes the human buffer that used to quietly absorb them, so the same rot now surfaces faster, more confidently, and to a wider audience.
 
 Key points:
-- A practical checklist (owner, description, modeled vs. raw, lineage/usage, tests, freshness) for picking a dataset under deadline pressure
-- Why that checklist is a symptom, not a fix — a good platform makes it unnecessary
-- Ties back to post 2 (durable ownership) and post 3 (a quality stamp before trust) as the actual solution
+- An analyst who hits a shady table usually hesitates, caveats, or asks around. An AI agent doesn't — it picks a plausible-looking table and answers with full confidence, at the speed of a chat message
+- This turns old, slow-burning failure modes ("I don't know where this number came from") into fast, wide-blast-radius ones ("the AI told the exec team a confidently wrong number in a meeting")
+- AI tools that bypass a semantic layer and query raw/intermediate models directly reintroduce the exact inconsistency a semantic layer exists to prevent — just faster and to more people
+- The preconditions the earlier posts argued for (durable ownership, a quality stamp, real governance) stop being "nice to have eventually" and become urgent the moment AI starts querying broadly
+- Framing: AI is a magnifying glass on the data platform, not a fix for it — it makes existing quality visible at a scale and speed nothing before it did
 
-Avoid: don't turn the checklist into the takeaway — the point is that needing one at all is the failure.
+Avoid: don't make this a generic "AI and data quality" listicle — keep it specifically about how AI changes the *shape* and *speed* of the failure modes the earlier posts already described.
 
 ## Idea bank (unsorted, not yet assigned to a post)
 
-(empty)
+- How do you actually choose the right dataset in the first place? (practical checklist: owner, description, modeled vs. raw, lineage/usage, tests, freshness — but the checklist itself is a symptom, not a fix; ties to post 2's ownership and post 3's quality stamp)
