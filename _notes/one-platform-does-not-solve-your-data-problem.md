@@ -1,6 +1,7 @@
 ---
 title: "One data platform does not solve your data problem"
 date: 2026-07-06
+tags: [data-platforms]
 ---
 
 Somewhere in every data platform pitch there's a slide that says something like "a single source of truth." I have sat through a lot of these slides. I believe the person presenting them. I also think the slide is wrong, or at least wrong about what happens next.

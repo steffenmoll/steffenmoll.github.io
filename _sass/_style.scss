@@ -30,6 +30,24 @@ time {
   margin: 0.5em 0 1em;
 }
 
+.tags {
+  margin: 0 0 1em;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.75em;
+  padding: 0.15em 0.6em;
+  margin: 0 0.4em 0.4em 0;
+  border: 1px solid $color-border;
+  border-radius: 999px;
+  color: $color-subtext;
+
+  &:after {
+    content: "";
+  }
+}
+
 footer {
   margin: 2em 0;
   font-size: 0.8em;

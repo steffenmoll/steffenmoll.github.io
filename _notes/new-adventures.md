@@ -1,6 +1,7 @@
 ---
 title: "Micro-contributions"
 date: 2026-07-02
+tags: [personal, writing]
 ---
 
 I'm not usually the kind of person who posts stuff publicly - nor in social media or other forums. I think I've just never really had the need to put myself out there. 
