@@ -51,21 +51,6 @@ Key points:
 
 Avoid: keep this concrete and example-led, it's the payoff post after three posts of framing.
 
-## Standalone posts (not part of a series)
-
-### AI doesn't fix your data problems, it amplifies them — status: drafted
-
-Angle: layering AI (copilots, agents, natural-language analytics) on top of a data platform doesn't fix the underlying data problems, it removes the human buffer that used to quietly absorb them, so the same rot now surfaces faster, more confidently, and to a wider audience.
-
-Key points:
-- An analyst who hits a shady table usually hesitates, caveats, or asks around. An AI agent doesn't — it picks a plausible-looking table and answers with full confidence, at the speed of a chat message
-- This turns old, slow-burning failure modes ("I don't know where this number came from") into fast, wide-blast-radius ones ("the AI told the exec team a confidently wrong number in a meeting")
-- AI tools that bypass a semantic layer and query raw/intermediate models directly reintroduce the exact inconsistency a semantic layer exists to prevent — just faster and to more people
-- The preconditions that make a platform trustworthy (durable ownership, a quality stamp, real governance) stop being "nice to have eventually" and become urgent the moment AI starts querying broadly
-- Framing: AI is a magnifying glass on the data platform, not a fix for it — it makes existing quality visible at a scale and speed nothing before it did
-
-Avoid: don't make this a generic "AI and data quality" listicle — keep it specifically about how AI changes the *shape* and *speed* of data platform failure modes. Don't frame it as part of the data platforms series.
-
 ## Idea bank (unsorted, not yet assigned to a post)
 
 - How do you actually choose the right dataset in the first place? (practical checklist: owner, description, modeled vs. raw, lineage/usage, tests, freshness — but the checklist itself is a symptom, not a fix; ties to post 2's ownership and post 3's quality stamp)
