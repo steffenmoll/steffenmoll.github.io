@@ -1,6 +1,6 @@
 ---
 title: "One data platform does not solve your data problem"
-date: 2026-07-06
+date: 2026-07-23
 ---
 
 Somewhere in every data platform pitch there's a slide that says something like "a single source of truth." I have sat through a lot of these slides. I believe the person presenting them. I also think the slide is wrong, or at least wrong about what happens next.
@@ -21,4 +21,4 @@ None of this means platforms are a bad idea. I'd take a decent platform with kno
 
 Once the data platform is live, the interesting questions start: who decides what counts as a trustworthy dataset, who's allowed to publish one, and what happens when two teams build the same thing twice because nobody could tell them not to.
 
-That's what this series is about, really: the platform was never the hard part. The posts that follow get into why the org chart matters more than the tech stack, where the line between flexibility and governance should sit, and what a workable answer to "how do we scale this" looks like, with an actual example instead of a diagram.
+That's what these next upcoming posts is about, really: the platform was never the hard part. The posts that follow get into why the org chart matters more than the tech stack, where the line between flexibility and governance should sit, and what a workable answer to "how do we scale this" looks like, with an actual example instead of a diagram.
