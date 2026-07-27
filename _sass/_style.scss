@@ -125,17 +125,10 @@ nav {
   margin: 1em 0 3em;
 }
 
-#notes-entry-container {
+.related-notes-grid {
   display: grid;
-  grid-gap: 2em;
-  grid-template-areas:
-    "content"
-    "side";
-
-  @media (min-width: 700px) {
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas: "content side";
-  }
+  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
 }
 
 .backlink-box {
