@@ -1,5 +1,5 @@
 ---
-title: "Did big tech just kill big tech"
+title: "Did big tech just kill big tech?"
 date: 2026-07-29
 tags: [ai, open source, home-lab]
 ---
@@ -12,7 +12,7 @@ In the corporate world, it means the evaluations for the traditional build-vs-bu
 
 For years that gap was the whole pitch for managed platforms: don't self-host, let us carry the operational grind, you focus on the product. Fair trade, mostly. Self-hosting open source has always been free the way a stray dog is free. No purchase price, plenty of upkeep. Someone still has to patch it, watch it, and debug the config at midnight when it quietly stops working.
 
-To me, it seems like something in between, a hybrid, will be the new normal; pre-built frameworks which have all the core components you need, but with an AI helping out with the ops. Turns out that player has been here for years already - open source. 
+To me, **it seems like something in between, a hybrid, will be the new normal**; pre-built frameworks which have all the core components you need, but with an AI helping out with the ops. Turns out that player has been here for years already - open source. 
 
 > Open source just got easier.
 
@@ -20,11 +20,11 @@ That's what agents actually change: not the software, the babysitting around it.
 
 Scale that up to a company and the math changes too. Enterprises didn't avoid self-hosted open source because the software was worse. They avoided it because someone had to babysit it, and a vendor's managed offering made that cost someone else's problem. Shrink the babysitting bill and build-vs-buy tilts back toward build, or at least toward self-host.
 
-Data sovereignty sharpens this. The industries and regions that already care where their data sits were paying the biggest premium for managed convenience. Take away the operational tax on self-hosting, and keeping things in-house stops being the expensive, principled choice. It's just the obvious one.
+**Data sovereignty sharpens this.** The industries and regions that already care where their data sits were paying the biggest premium for managed convenience. Take away the operational tax on self-hosting, and keeping things in-house stops being the expensive, principled choice. It's just the obvious one.
 
 This also applies to individuals who would like to take more control of their privacy and digital footprint, and host their data at home rather than on someone else's computer. I would not be surprised to see home-labbing also get more presence, even among non-geeky individuals. 
 
-There's a risk angle too. Once you can reasonably hand some share of your codebase to an agent, you have to actually decide what's critical and what's just glue and scaffolding nobody wanted to spend senior engineering time on anyway. That split forces teams to be deliberate about where their human attention actually goes.
+**There's a risk angle too.** Once you can reasonably hand some share of your codebase to an agent, you have to actually decide what's critical and what's just glue and scaffolding nobody wanted to spend senior engineering time on anyway. That split forces teams to be deliberate about where their human attention actually goes.
 
 None of this makes big tech's platforms useless, scale and compliance guarantees are still real. But a lot of what people were paying for was never the software, it was not having to deal with the toil around it. Agents chip away at exactly that toil. 
 
