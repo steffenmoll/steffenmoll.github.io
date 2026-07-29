@@ -12,9 +12,9 @@ In the corporate world, it means the evaluations for the traditional build-vs-bu
 
 For years that gap was the whole pitch for managed platforms: don't self-host, let us carry the operational grind, you focus on the product. Fair trade, mostly. Self-hosting open source has always been free the way a stray dog is free. No purchase price, plenty of upkeep. Someone still has to patch it, watch it, and debug the config at midnight when it quietly stops working.
 
-To me, **it seems like something in between, a hybrid, will be the new normal**; pre-built frameworks which have all the core components you need, but with an AI helping out with the ops and customization. Turns out that player has been here for years already - open source. 
-
 > Open source just got easier.
+
+To me, **it seems like something in between, a hybrid, will be the new normal**; pre-built frameworks which have all the core components you need, but with an AI helping out with the ops and customization. Turns out that player has been here for years already - open source. 
 
 That's what agents actually change: not the software, the babysitting around it. I run a home lab for fun, nothing critical riding on it, and I've felt the shift. Used to be me at 23:00, staring at a log file trying to figure out why a container won't come back up. Now I describe the problem and let an agent go dig through it. Same interesting work, a lot less of the tedious kind, the kind that was never why I wanted a home lab in the first place.
 
@@ -22,7 +22,7 @@ Scale that up to a company and the math changes too. Enterprises didn't avoid se
 
 **Data sovereignty sharpens this.** The industries and regions that already care where their data sits were paying the biggest premium for managed convenience. Take away the operational tax on self-hosting, and keeping things in-house stops being the expensive, principled choice. It's just the obvious one.
 
-This also applies to individuals who would like to take more control of their privacy and digital footprint, and host their data at home rather than on someone else's computer. I would not be surprised to see home-labbing also get more presence, even among non-geeky individuals. 
+This also applies to individuals who would like to take more control of their privacy and digital footprint, and host their data at home rather than on someone else's computer. I would not be surprised to see home-labbing also get more popular, even among non-geeky individuals. 
 
 **There's a risk angle too.** Once you can reasonably hand some share of your codebase to an agent, you have to actually decide what's critical and what's just glue and scaffolding nobody wanted to spend senior engineering time on anyway. That split forces teams to be deliberate about where their human attention actually goes.
 
