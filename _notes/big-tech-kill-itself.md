@@ -12,7 +12,7 @@ In the corporate world, it means the evaluations for the traditional build-vs-bu
 
 For years that gap was the whole pitch for managed platforms: don't self-host, let us carry the operational grind, you focus on the product. Fair trade, mostly. Self-hosting open source has always been free the way a stray dog is free. No purchase price, plenty of upkeep. Someone still has to patch it, watch it, and debug the config at midnight when it quietly stops working.
 
-To me, **it seems like something in between, a hybrid, will be the new normal**; pre-built frameworks which have all the core components you need, but with an AI helping out with the ops. Turns out that player has been here for years already - open source. 
+To me, **it seems like something in between, a hybrid, will be the new normal**; pre-built frameworks which have all the core components you need, but with an AI helping out with the ops and customization. Turns out that player has been here for years already - open source. 
 
 > Open source just got easier.
 
