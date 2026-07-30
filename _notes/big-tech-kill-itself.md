@@ -16,6 +16,8 @@ For years that gap was the whole pitch for managed platforms: don't self-host, l
 
 To me, **it seems like something in between, a hybrid, will be the new normal**; pre-built frameworks which have all the core components you need, but with an AI helping out with the ops and customization. Turns out that player has been here for years already - open source. 
 
+Even though open source is old news, the introduction of open weight language models and smaller edge llms is a new paradigm. Maybe running an agent locally is not so far fetched anymore. 
+
 That's what agents actually change: not the software, the babysitting around it. I run a home lab for fun, nothing critical riding on it, and I've felt the shift. Used to be me at 23:00, staring at a log file trying to figure out why a container won't come back up. Now I describe the problem and let an agent go dig through it. Same interesting work, a lot less of the tedious kind, the kind that was never why I wanted a home lab in the first place.
 
 Scale that up to a company and the math changes too. Enterprises didn't avoid self-hosted open source because the software was worse. They avoided it because someone had to babysit it, and a vendor's managed offering made that cost someone else's problem. Shrink the babysitting bill and build-vs-buy tilts back toward build, or at least toward self-host.
