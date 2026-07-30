@@ -1,6 +1,6 @@
 ---
 title: "Did big tech just kill big tech?"
-date: 2026-07-29
+date: 2026-07-30
 tags: [ai, open source, home-lab]
 ---
 
