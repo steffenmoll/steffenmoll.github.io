@@ -5,6 +5,10 @@ author:              steffenmoll
 url:                 "https://steffenmoll.github.io"
 baseurl:             ""
 
+# Set this to your Buttondown username to show a newsletter signup form
+# at the bottom of each note. Leave blank to hide the form.
+buttondown_username: "mollestad"
+
 include:             ['_pages']
 exclude:             ['_includes/notes_graph.json', 'starting-point.md', 'docs', 'README.md', 'Gemfile', 'Gemfile.lock', 'wiki']
 
@@ -38,6 +42,13 @@ collections:
   notes:
     output: true
     permalink: /:slug
+
+plugins:
+  - jekyll-feed
+
+feed:
+  collections:
+    - notes
 
 defaults:
   - scope:

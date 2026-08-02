@@ -1,0 +1,44 @@
+{% if site.buttondown_username and site.buttondown_username != "" %}
+<hr>
+
+<div class="newsletter-signup">
+  <p class="newsletter-signup-eyebrow">Receive my updates</p>
+  <p class="newsletter-signup-follow">
+    Follow me via email, <a href="{{ '/feed/notes.xml' | relative_url }}">RSS</a> or
+    <a href="https://www.linkedin.com/in/steffenmollestad/">LinkedIn</a>.
+  </p>
+
+  <form
+    action="https://buttondown.com/api/emails/embed-subscribe/{{ site.buttondown_username }}"
+    method="post"
+    class="newsletter-signup-form"
+    target="_blank"
+  >
+    <div class="newsletter-signup-honeypot" aria-hidden="true">
+      <label for="newsletter-signup-name">Name</label>
+      <input type="text" id="newsletter-signup-name" name="name" tabindex="-1" autocomplete="off" />
+    </div>
+
+    <label for="newsletter-signup-email" class="visually-hidden">Enter your email</label>
+    <input
+      type="email"
+      id="newsletter-signup-email"
+      name="email"
+      placeholder="Enter your email"
+      required
+    />
+    <button type="submit">Sign up</button>
+  </form>
+</div>
+
+<script>
+  document.querySelectorAll(".newsletter-signup-form").forEach(function (form) {
+    form.addEventListener("submit", function (event) {
+      var honeypot = form.querySelector('input[name="name"]');
+      if (honeypot && honeypot.value) {
+        event.preventDefault();
+      }
+    });
+  });
+</script>
+{% endif %}
