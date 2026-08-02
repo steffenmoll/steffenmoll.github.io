@@ -39,6 +39,13 @@ collections:
     output: true
     permalink: /:slug
 
+plugins:
+  - jekyll-feed
+
+feed:
+  collections:
+    - notes
+
 defaults:
   - scope:
       path: "**/*"

@@ -13,6 +13,8 @@
 
   <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
 
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed/notes.xml' | absolute_url }}" />
+
   {% if page.excerpt %}
   <meta property="og:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}"/>
   {% else %}

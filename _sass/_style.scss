@@ -152,3 +152,80 @@ code {
   color: #ccc;
   cursor: help;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.newsletter-signup-eyebrow {
+  margin: 0 0 0.8em;
+  font-size: 1.3em;
+  color: $color-subtext;
+}
+
+.newsletter-signup-follow {
+  margin: 0 0 1.5em;
+}
+
+.newsletter-signup-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.newsletter-signup-form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5em;
+
+  input[type="email"] {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 260px;
+    padding: 0.4em 0;
+    font-family: $font-family;
+    font-size: 1em;
+    color: $color-text;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid $color-border;
+    border-radius: 0;
+
+    &::placeholder {
+      color: $color-subtext;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom-color: $color-primary;
+    }
+  }
+
+  button {
+    flex: 0 0 auto;
+    padding: 0.6em 1.5em;
+    font-family: $font-family;
+    font-size: 1em;
+    color: white;
+    background: $color-primary;
+    border: 1px solid $color-primary;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 300ms;
+
+    &:hover {
+      background: mix($color-primary, white, 80%);
+    }
+  }
+}
