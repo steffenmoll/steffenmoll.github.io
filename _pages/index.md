@@ -17,3 +17,5 @@ Hi, I'm Steffen, and this is where I write things down when they've been rattlin
     </li>
   {% endfor %}
 </ul>
+
+{% include newsletter-signup.html %}

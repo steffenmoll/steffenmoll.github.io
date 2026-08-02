@@ -11,7 +11,7 @@ layout: default
     {% if page.tags and page.tags.size > 0 %}
     <div class="tags">
       {% for tag in page.tags %}
-      <a class="tag" href="{{ site.baseurl }}/tags/#{{ tag | slugify }}">{{ tag }}</a>
+      <a class="tag" href="{{ site.baseurl }}/topics/#{{ tag | slugify }}">{{ tag }}</a>
       {% endfor %}
     </div>
     {% endif %}
