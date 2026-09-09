@@ -1,5 +1,5 @@
 ---
-title: "Governance by obscurity is over"
+title: "Governance by obscurity"
 date: 2026-09-09
 tags: [data-platforms, ai]
 ---
