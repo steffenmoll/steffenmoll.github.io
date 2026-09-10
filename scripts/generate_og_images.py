@@ -2,7 +2,9 @@
 """Generate social share images: assets/og-default.png and
 assets/og/<slug>.png for each note.
 
-Rerun after adding or editing a note so its preview image stays in sync:
+Runs automatically in the Pages build (see .github/workflows/pages.yml),
+so new notes get a matching image on deploy without any manual step.
+Rerun locally if you want to preview the result before pushing:
 
     python3 scripts/generate_og_images.py
 
