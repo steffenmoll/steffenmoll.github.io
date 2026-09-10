@@ -1,12 +1,18 @@
-$color-primary: hsl(0, 0%, 10%);
-$color-text: hsl(0, 0%, 20%);
-$color-subtext: hsl(0, 0%, 30%);
-$color-border: hsl(0, 0%, 85%);
-$color-box-background: mix($color-primary, white, 4%);
+$color-bg: #faf9f7;
+$color-primary: #1c1917;
+$color-text: #44403c;
+$color-subtext: #78716c;
+$color-muted: #a8a29e;
+$color-border: #e7e5e4;
+$color-box-background: #f1f0ed;
+$color-code-border: #dfddd8;
 $border-radius: 4px;
 $max-width: 700px;
-$font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-  sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+$font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+$font-family-heading: Inter, -apple-system, BlinkMacSystemFont, Segoe UI,
+  Helvetica, Arial, sans-serif;
+$font-family-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo,
+  Consolas, monospace;
 
 body {
   box-sizing: content-box;
@@ -16,32 +22,90 @@ body {
   padding: 4vh 6vw;
   overflow-x: hidden;
   color: $color-text;
+  background: $color-bg;
   font-size: 1rem;
   max-width: $max-width;
+  position: relative;
 
   @media (min-width: 820px) {
     font-size: 1.2rem;
   }
+
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("/assets/grain.png");
+    background-size: 200px 200px;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-heading;
+  font-weight: 700;
+  color: $color-primary;
+  line-height: 1.3;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+nav a {
+  font-family: $font-family-mono;
+  font-size: 0.75em;
+}
+
+nav a:first-child {
+  font-weight: 500;
+}
+
+.note > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 1.5em;
+  margin: 0 0 2.5em;
+
+  h1 {
+    flex: 1 0 100%;
+  }
 }
 
 time {
-  display: block;
-  color: $color-subtext;
-  margin: 0.5em 0 1em;
+  font-family: $font-family-mono;
+  font-size: 0.7em;
+  line-height: 1;
+  color: $color-muted;
+  margin: 0.6em 0 0;
+  padding: 0.3em 0;
+  border: 1px solid transparent;
 }
 
 .tags {
-  margin: 0 0 1em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 0.7em;
+  gap: 0.4em;
+  margin: 0.6em 0 0;
 }
 
 .tag {
   display: inline-block;
-  font-size: 0.75em;
-  padding: 0.15em 0.6em;
-  margin: 0 0.4em 0.4em 0;
+  font-family: $font-family-mono;
+  font-size: 1em;
+  line-height: 1;
+  padding: 0.3em 0.6em;
   border: 1px solid $color-border;
   border-radius: 999px;
-  color: $color-subtext;
+  color: $color-muted;
 
   &:after {
     content: "";
@@ -50,8 +114,9 @@ time {
 
 footer {
   margin: 2em 0;
-  font-size: 0.8em;
-  color: mix($color-text, white, 80%);
+  font-family: $font-family-mono;
+  font-size: 0.75em;
+  color: $color-muted;
   padding-top: 1em;
 }
 
@@ -81,26 +146,20 @@ hr {
   background: $color-border;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.3;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
 .topic-heading {
   font-weight: normal;
+}
+
+strong,
+b {
+  color: $color-primary;
 }
 
 a {
   transition: background 300ms;
   padding: 0 0.1em;
   text-decoration: none;
-  border-bottom: 1px solid $color-border;
+  border-bottom: 1px solid $color-subtext;
   color: $color-primary;
   &:hover {
     color: black !important;
@@ -126,7 +185,7 @@ a {
 }
 
 nav {
-  margin: 1em 0 3em;
+  margin: 1em 0 2.5em;
 }
 
 .related-notes-list {
@@ -140,8 +199,11 @@ nav {
 }
 
 code {
-  background: #f5f5f5;
-  padding: 0.1em 0.2em;
+  font-family: $font-family-mono;
+  font-size: 0.9em;
+  background: $color-box-background;
+  border: 1px solid $color-code-border;
+  padding: 0.1em 0.3em;
   border-radius: 4px;
 }
 
@@ -197,7 +259,7 @@ code {
     min-width: 0;
     max-width: 350px;
     padding: 0.4em 0;
-    font-family: $font-family;
+    font-family: $font-family-heading;
     font-size: 0.9em;
     color: $color-text;
     background: none;
@@ -218,7 +280,7 @@ code {
   button {
     flex: 0 0 auto;
     padding: 0.45em 1.1em;
-    font-family: $font-family;
+    font-family: $font-family-heading;
     font-size: 0.9em;
     color: white;
     background: $color-primary;
