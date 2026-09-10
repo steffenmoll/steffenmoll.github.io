@@ -1,6 +1,6 @@
 $color-bg: #faf9f7;
 $color-primary: #1c1917;
-$color-text: #44403c;
+$color-text: #6c665e;
 $color-subtext: #78716c;
 $color-muted: #a8a29e;
 $color-border: #e7e5e4;
@@ -19,6 +19,7 @@ body {
   font-family: $font-family;
   margin: 0 auto;
   line-height: 1.7;
+  letter-spacing: -.01em;
   padding: 4vh 6vw;
   overflow-x: hidden;
   color: $color-text;
@@ -208,7 +209,7 @@ code {
 }
 
 .invalid-link {
-  color: #444444;
+  color: #333;
   cursor: help;
   background: #fafafa;
   padding: 0 0.1em;
