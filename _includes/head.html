@@ -36,7 +36,15 @@
 
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
 
-  {% assign og_image = page.image | default: "/assets/og-default.png" %}
+  {% assign og_image = page.image %}
+  {% if og_image == nil and page.slug %}
+    {% assign og_note_path = "/assets/og/" | append: page.slug | append: ".png" %}
+    {% assign og_note_matches = site.static_files | where_exp: "f", "f.path == og_note_path" %}
+    {% if og_note_matches.size > 0 %}
+      {% assign og_image = og_note_path %}
+    {% endif %}
+  {% endif %}
+  {% assign og_image = og_image | default: "/assets/og-default.png" %}
   <meta property="og:image" content="{{ site.url }}{{ og_image }}">
   {% unless page.image %}
   <meta property="og:image:width" content="1200">
