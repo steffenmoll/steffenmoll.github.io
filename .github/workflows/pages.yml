@@ -27,6 +27,14 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Generate social share images
+        run: |
+          pip install Pillow
+          python3 scripts/generate_og_images.py
       - name: Build with Jekyll
         run: bundle exec jekyll build
         env:
