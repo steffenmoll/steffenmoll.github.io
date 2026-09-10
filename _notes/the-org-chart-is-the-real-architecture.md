@@ -4,7 +4,7 @@ date: 2026-07-27
 tags: [data-platforms, organization]
 ---
 
-*This is the second post on data platforms. If you haven't, <a class="internal-link" href="/one-platform-does-not-solve-your-data-problem">read part 1</a> first.*
+*This is the second post on data platforms. If you haven't, read <a class="internal-link" href="/one-platform-does-not-solve-your-data-problem">part 1</a> first.*
 
 Making a data platform functional was never a technical problem. It's an organizational one, and it gets harder as your org grows, not as your data does.
 
