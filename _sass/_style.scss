@@ -57,19 +57,22 @@ h6 {
 }
 
 nav a:first-child {
-  font-family: $font-family-heading;
-  font-weight: 700;
+  font-family: $font-family-mono;
+  font-weight: 500;
 }
 
 time {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   font-family: $font-family-mono;
   font-size: 0.85em;
   color: $color-muted;
-  margin: 0.5em 0 1em;
+  margin: 0.5em 0.75em 1em 0;
 }
 
 .tags {
+  display: inline-block;
+  vertical-align: middle;
   margin: 0 0 1em;
 }
 
