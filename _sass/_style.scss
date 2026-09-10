@@ -14,6 +14,10 @@ $font-family-heading: Inter, -apple-system, BlinkMacSystemFont, Segoe UI,
 $font-family-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo,
   Consolas, monospace;
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   box-sizing: content-box;
   font-family: $font-family;

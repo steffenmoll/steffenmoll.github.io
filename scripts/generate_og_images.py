@@ -148,23 +148,31 @@ def render_note(path, out_path):
         y += line_height
     y += 20
 
+    row_h = 50
+    date_font = mono(26)
+    tag_font = mono(24, "Medium")
+
     if data["date"]:
         date_str = datetime.date.fromisoformat(data["date"]).strftime("%B %-d, %Y")
-        draw.text((pad, y), date_str, font=mono(26), fill=MUTED)
-        y += 44
+        draw.text((pad, y + row_h / 2), date_str, font=date_font, fill=MUTED, anchor="lm")
+        date_w = draw.textbbox((0, 0), date_str, font=date_font)[2]
+        x = pad + date_w + 28
+    else:
+        x = pad
 
     if data["tags"]:
-        tag_font = mono(24, "Medium")
-        x, ty = pad, y
+        ty = y
         for tag in data["tags"]:
             tw = draw.textbbox((0, 0), tag, font=tag_font)[2]
-            pill_w, pill_h = tw + 34, 50
+            pill_w = tw + 34
             if x + pill_w > W - pad:
-                x, ty = pad, ty + pill_h + 14
+                x, ty = pad, ty + row_h + 14
             draw.rounded_rectangle(
-                [x, ty, x + pill_w, ty + pill_h], radius=pill_h // 2, outline=BORDER, width=2
+                [x, ty, x + pill_w, ty + row_h], radius=row_h // 2, outline=BORDER, width=2
             )
-            draw.text((x + 17, ty + 12), tag, font=tag_font, fill=MUTED)
+            draw.text(
+                (x + pill_w / 2, ty + row_h / 2), tag, font=tag_font, fill=MUTED, anchor="mm"
+            )
             x += pill_w + 14
 
     draw_footer(draw, H - 110)
