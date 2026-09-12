@@ -1,7 +1,7 @@
 ---
 title: "Governance by obscurity"
 date: 2026-09-09
-tags: [data-platform, ai]
+tags: [data platform, ai]
 ---
 
 *This is the third post on data platforms. Read <a class="internal-link" href="/the-org-chart-is-the-real-architecture">part 2</a> if you haven't already.*
