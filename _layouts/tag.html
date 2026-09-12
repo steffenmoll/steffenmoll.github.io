@@ -2,13 +2,19 @@
 layout: default
 ---
 
-<h1 class="topic-heading">{{ page.tag }}</h1>
+<article class="note">
+  <div>
+    <h1>{{ page.tag }}</h1>
+  </div>
 
-<ul>
-  {% assign tagged_notes = site.notes | where_exp: "note", "note.tags contains page.tag" | sort: "date" | reverse %}
-  {% for note in tagged_notes %}
-    <li>{{ note.date | date: "%Y-%m-%d" }} &mdash; <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a></li>
-  {% endfor %}
-</ul>
+  <content>
+    <ul>
+      {% assign tagged_notes = site.notes | where_exp: "note", "note.tags contains page.tag" | sort: "date" | reverse %}
+      {% for note in tagged_notes %}
+        <li>{{ note.date | date: "%Y-%m-%d" }} &mdash; <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </content>
+</article>
 
-<p><a class="internal-link" href="{{ site.baseurl }}/topics/">&larr; All topics</a></p>
+<p><a class="internal-link" href="{{ site.baseurl }}/">&larr; Home</a></p>
