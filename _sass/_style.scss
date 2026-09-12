@@ -143,6 +143,10 @@ time {
   border-radius: 999px;
   color: var(--color-text);
 
+  &:hover {
+    border-bottom-color: var(--color-border);
+  }
+
   &:after {
     content: "";
   }
