@@ -51,8 +51,19 @@ $font-family-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo,
 html {
   overflow-y: scroll;
   min-height: 100%;
-  background: var(--color-bg);
-  transition: background $transition-duration;
+  background-image: url("/assets/grain-light.png");
+  background-size: 200px 200px;
+  background-attachment: fixed;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    background-image: url("/assets/grain-dark.png");
+  }
+}
+
+html[data-theme="dark"] {
+  background-image: url("/assets/grain-dark.png");
 }
 
 body {
@@ -65,8 +76,7 @@ body {
   padding: 4vh 6vw;
   overflow-x: hidden;
   color: var(--color-text);
-  background: var(--color-bg);
-  transition: background $transition-duration, color $transition-duration;
+  transition: color $transition-duration;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1rem;
@@ -75,17 +85,6 @@ body {
 
   @media (min-width: 820px) {
     font-size: 1.2rem;
-  }
-
-  &::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: url("/assets/grain.png");
-    background-size: 200px 200px;
-    opacity: 0.05;
-    pointer-events: none;
-    z-index: -1;
   }
 }
 
