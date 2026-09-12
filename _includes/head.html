@@ -1,6 +1,27 @@
 <head>
   <meta charset="UTF-8">
 
+  <script>
+    (function () {
+      var stored = null;
+      try {
+        stored = localStorage.getItem("theme");
+      } catch (e) {}
+      var media = window.matchMedia("(prefers-color-scheme: dark)");
+      document.documentElement.setAttribute("data-theme", stored || (media.matches ? "dark" : "light"));
+
+      media.addEventListener("change", function (e) {
+        var stillStored = null;
+        try {
+          stillStored = localStorage.getItem("theme");
+        } catch (e) {}
+        if (!stillStored) {
+          document.documentElement.setAttribute("data-theme", e.matches ? "dark" : "light");
+        }
+      });
+    })();
+  </script>
+
   <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
