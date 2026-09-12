@@ -8,6 +8,7 @@ $font-family-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo,
   Consolas, monospace;
 
 :root {
+  color-scheme: light;
   --color-bg: #faf9f7;
   --color-primary: #1c1917;
   --color-text: #6c665e;
@@ -20,6 +21,7 @@ $font-family-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo,
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
+    color-scheme: dark;
     --color-bg: #1c1917;
     --color-primary: #faf9f7;
     --color-text: #c9c4bd;
@@ -32,6 +34,7 @@ $font-family-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo,
 }
 
 :root[data-theme="dark"] {
+  color-scheme: dark;
   --color-bg: #1c1917;
   --color-primary: #faf9f7;
   --color-text: #c9c4bd;
@@ -44,6 +47,8 @@ $font-family-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo,
 
 html {
   overflow-y: scroll;
+  background: var(--color-bg);
+  transition: background $transition-duration;
 }
 
 body {
