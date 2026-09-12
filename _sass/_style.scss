@@ -16,6 +16,7 @@ $font-family-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo,
   --color-border: #e7e5e4;
   --color-box-background: #f1f0ed;
   --color-code-border: #dfddd8;
+  --color-link-hover-bg: #fffaf1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,6 +29,7 @@ $font-family-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo,
     --color-border: #3f3a34;
     --color-box-background: #292521;
     --color-code-border: #44403c;
+    --color-link-hover-bg: #3a3020;
   }
 }
 
@@ -40,6 +42,7 @@ $font-family-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo,
   --color-border: #3f3a34;
   --color-box-background: #292521;
   --color-code-border: #44403c;
+  --color-link-hover-bg: #3a3020;
 }
 
 html {
@@ -203,7 +206,7 @@ a {
   color: var(--color-primary);
   &:hover {
     color: var(--color-primary) !important;
-    background: var(--color-box-background);
+    background: var(--color-link-hover-bg);
     border-bottom-color: var(--color-subtext);
   }
   &:after {
