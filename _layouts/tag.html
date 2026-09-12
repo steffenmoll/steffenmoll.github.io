@@ -17,4 +17,23 @@ layout: default
   </content>
 </article>
 
+{% assign related_tags = "" | split: "" %}
+{% for note in tagged_notes %}
+  {% for tag in note.tags %}
+    {% unless tag == page.tag or related_tags contains tag %}
+      {% assign related_tags = related_tags | push: tag %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+{% assign related_tags = related_tags | sort %}
+
+{% if related_tags.size > 0 %}
+<div class="tags">
+  <h3 style="margin-bottom: 1em">Related tags</h3>
+  {% for tag in related_tags %}
+  <a class="tag" href="{{ site.baseurl }}/topics/{{ tag | slugify }}/">{{ tag }}</a>
+  {% endfor %}
+</div>
+{% endif %}
+
 <p><a class="internal-link" href="{{ site.baseurl }}/">&larr; Home</a></p>
