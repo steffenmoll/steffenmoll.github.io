@@ -1,5 +1,6 @@
 $border-radius: 4px;
 $max-width: 700px;
+$transition-duration: 200ms;
 $font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
 $font-family-heading: Inter, -apple-system, BlinkMacSystemFont, Segoe UI,
   Helvetica, Arial, sans-serif;
@@ -55,7 +56,7 @@ body {
   overflow-x: hidden;
   color: var(--color-text);
   background: var(--color-bg);
-  transition: background 200ms, color 200ms;
+  transition: background $transition-duration, color $transition-duration;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 1rem;
@@ -191,7 +192,7 @@ b {
 }
 
 a {
-  transition: background 300ms, border-bottom-color 300ms;
+  transition: background $transition-duration, border-bottom-color $transition-duration;
   padding: 0 0.1em;
   text-decoration: none;
   border-bottom: 1px solid var(--color-muted);
@@ -327,7 +328,7 @@ code {
     border: 1px solid var(--color-primary);
     border-radius: 6px;
     cursor: pointer;
-    transition: background 300ms;
+    transition: background $transition-duration;
 
     &:hover {
       opacity: 0.8;
@@ -346,7 +347,7 @@ code {
   border: 0;
   cursor: pointer;
   color: var(--color-muted);
-  transition: color 300ms;
+  transition: color $transition-duration;
 
   &:hover {
     color: var(--color-primary);
