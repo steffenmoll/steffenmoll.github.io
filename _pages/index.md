@@ -7,6 +7,14 @@ permalink: /
 
 Hi, I'm Steffen, and this is where I write things down when they've been rattling around in my head for too long. Mostly data platforms and the challenges that comes with them, sometimes whatever else is on my mind.
 
+<strong>Topics</strong>
+
+<div class="tags">
+  {% for tag in site.data.tags %}
+  <a class="internal-link tag" href="{{ site.baseurl }}/topics/{{ tag | slugify }}/">{{ tag }}</a>
+  {% endfor %}
+</div>
+
 <strong>Posts</strong>
 
 <ul>
