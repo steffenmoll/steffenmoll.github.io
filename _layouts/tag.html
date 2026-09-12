@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h1 class="topic-heading">{{ page.tag }}</h1>
+<h1>{{ page.tag }}</h1>
 
 <ul>
   {% assign tagged_notes = site.notes | where_exp: "note", "note.tags contains page.tag" | sort: "date" | reverse %}
@@ -11,4 +11,4 @@ layout: default
   {% endfor %}
 </ul>
 
-<p><a class="internal-link" href="{{ site.baseurl }}/topics/">&larr; All topics</a></p>
+<p><a class="internal-link" href="{{ site.baseurl }}/">&larr; Home</a></p>
