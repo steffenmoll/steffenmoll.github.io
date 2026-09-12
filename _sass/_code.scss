@@ -1,6 +1,6 @@
 pre.highlight {
-  background: #f1f0ed;
-  border: 1px solid #dfddd8;
+  background: var(--color-box-background);
+  border: 1px solid var(--color-code-border);
   padding: 1em 1.2em;
   border-radius: 8px;
   font-size: 0.9em;
