@@ -145,6 +145,10 @@ time {
   }
 }
 
+.note .tag {
+  color: var(--color-muted);
+}
+
 footer {
   margin: 2em 0;
   font-family: $font-family-mono;
