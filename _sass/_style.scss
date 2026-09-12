@@ -351,12 +351,17 @@ code {
   svg {
     width: 1em;
     height: 1em;
+  }
+
+  &-icon--sun {
     stroke: currentColor;
     fill: none;
   }
 
   &-icon--moon {
     display: none;
+    fill: currentColor;
+    stroke: none;
   }
 }
 
