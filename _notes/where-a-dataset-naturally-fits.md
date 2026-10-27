@@ -9,14 +9,14 @@ tags: [data platform, data quality, ai]
 Part 3 left a trade-off open: how much governance, and where to spend it. Making that call dataset by dataset takes two things. You need a map of the terrain, and you need a way for people and agents to navigate it. This post is about drawing the map, because you can't give anyone directions across ground nobody has surveyed.
 
 A usable map has four axes.
-
+- **Reach.** Who the data is for. One team, a business capability (eg. like equities, fixed income), or the whole firm.
+- **Subject matter.** What the data is about, so related things sit together. This could be the difference of reference, operational, derived/analytical and alternative. This one is filing rather than grading, and it does less work than the other three, but a map without it is hard to read.
 - **Expected quality.** What somebody has promised about the dataset. Three tiers is enough:
   - `tier A`: someone has signed something. Data contract, named owner, defined coverage, and an SLA that gets honoured at three in the morning.
   - `tier B`: someone is watching. Tests run and monitoring exists, but nobody has promised it will be there on Monday.
   - `tier C`: nothing has been promised at all. Sandbox, ad hoc, use at your own risk.
 - **Monitored quality.** What the evidence shows: uptime, freshness, failing tests, history range, how many people query it. And **metadata coverage**, at both object and column level, which is the one most platforms skip and the one an agent leans on hardest when it picks a table. The tier is a claim, and this is what tests it.
-- **Reach.** Who the data is for. One team, a business capability like equities or fixed income, or the whole firm.
-- **Subject matter.** What the data is about, so related things sit together. This one is filing rather than grading, and it does less work than the other three, but a map without it is hard to read.
+
 
 Two of those axes carry most of the weight once you put them on a grid. Expected quality down the side, reach across the top, and every dataset you own lands in exactly one cell.
 
