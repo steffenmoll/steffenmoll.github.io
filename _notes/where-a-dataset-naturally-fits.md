@@ -23,9 +23,9 @@ Two axes carry most of the weight once you put them on a grid. Expected quality 
 
 | | Org-wide | Business capability | One team |
 |---|---|---|---|
-| tier A | **official positions, firm reporting** | capability benchmarks, risk inputs | rare, and usually over-built |
-| tier B | widely used, never promised | **most modelled marts** | a team's monitored working set |
-| tier C | ungoverned, and everyone is using it | exploratory work on a strategy | **scratch models, ad hoc** |
+| `tier A` | **official positions, firm reporting** | capability benchmarks, risk inputs | rare, and usually over-built |
+| `tier B` | widely used, never promised | **most modelled marts** | a team's monitored working set |
+| `tier C` | ungoverned, and everyone is using it | exploratory work on a strategy | **scratch models, ad hoc** |
 
 Most data should sit on the diagonal, and most of it does. A scratch model one analyst uses doesn't need an SLA. The official position data the whole firm reports on can't be a sandbox table. Expected quality rises with reach because the cost of being wrong rises with reach, and that correlation is what makes the map readable at a glance.
 
