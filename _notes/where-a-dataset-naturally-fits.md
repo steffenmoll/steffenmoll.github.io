@@ -12,9 +12,9 @@ A usable map has four axes.
 - **Reach.** Who the data is for. One team, a business domain (eg. like equities, fixed income, real assets in asset management), or the whole firm.
 - **Category.** What the data is about, so related things sit together. This could be the difference of reference, operational, derived/analytical and alternative data. This one is filing rather than grading, and it does less work than the other three, but a map without it is hard to read.
 - **Expected quality.** What somebody has promised about the dataset. Three tiers is enough:
-  - `tier A` - Certified: someone has signed something. Data contract, named owner, defined coverage, and an SLA that gets honoured at three in the morning.
-  - `tier B` - Supported: someone is watching. Tests run and monitoring exists, but nobody has promised it will be there on Monday.
-  - `tier C` - Best effort: nothing has been promised at all. Sandbox, ad hoc, use at your own risk.
+  - `tier A` - **Certified**: someone has signed something. Data contract, named owner, defined coverage, and an SLA that gets honoured at three in the morning.
+  - `tier B` - **Supported**: someone is watching. Tests run and monitoring exists, but nobody has promised it will be there on Monday.
+  - `tier C` - **Best effort**: nothing has been promised at all. Sandbox, ad hoc, use at your own risk.
 - **Monitored quality.** What the evidence shows: uptime, freshness, failing tests, history range, how many people query it. And **metadata coverage**, at both object and column level, which is the one most platforms skip and the one an agent leans on hardest when it picks a table. The tier is a claim, and this is what tests it.
 
 None of this is new territory. The Open Data Contract Standard[^1] defines schema, ownership and measured quality checks in machine-readable form, and Apache Ossie[^2] does the same for semantic models shared between BI tools. Neither one defines how broadly a dataset is meant to be relied on, or groups it by what it's about: reach and category are left to whoever adopts the standard. Medallion's bronze, silver, gold comes closer to a tier, but it's answering a different question, how refined data is rather than the business quality of the data itself, and in practice those two concerns don't sit on the same scale.
@@ -51,7 +51,7 @@ One more reason to bother. A map like this does very little as a wiki page, beca
 
 Also, removing redundant or duplicate datasets is the cheapest way to make the right data easy to find, and it costs almost nothing.
 
-The grid isn't the asset. The three questions behind it are: who the data is for, what's been promised, what's actually been delivered. Ask those of every dataset and the wrong cells stop hiding on their own.
+**The grid isn't the asset. The three questions behind it are: who the data is for, what's been promised, what's actually been delivered.** Ask those of every dataset and the wrong cells stop hiding on their own.
 
 [^1]: Open Data Contract Standard, maintained by the Bitol project under the Linux Foundation. <https://bitol-io.github.io/open-data-contract-standard/>
 [^2]: Apache Ossie (incubating), formerly the Open Semantic Interchange. <https://ossie.apache.org/>
