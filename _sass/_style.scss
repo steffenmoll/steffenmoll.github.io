@@ -275,15 +275,25 @@ table {
   }
 
   .footnotes {
+    position: relative;
     margin-top: 3em;
     padding-top: 1.5em;
-    border-top: 1px solid var(--color-border);
     font-family: $font-family-mono;
     font-size: 0.7em;
     word-break: break-word;
     overflow-wrap: anywhere;
     line-height: 1.6;
     color: var(--color-muted);
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 1px;
+      background: var(--color-border);
+    }
 
     ol {
       padding-left: 1.2em;
