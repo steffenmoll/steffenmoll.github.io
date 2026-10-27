@@ -53,7 +53,7 @@ html {
   min-height: 100%;
   background-image: url("/assets/grain-light.png");
   background-size: 200px 200px;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 @media (prefers-color-scheme: dark) {
