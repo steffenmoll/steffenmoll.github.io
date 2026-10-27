@@ -8,13 +8,13 @@ tags: [data platform, data governance, ai]
 
 Part 3 left a trade-off open: how much governance, and where to spend it. Making that call dataset by dataset takes two things. You need a map of the terrain, and you need a way for people and agents to navigate it. This post is about drawing the map, because you can't give anyone directions across ground nobody has surveyed.
 
-A usable map has four axes.
-- **Reach.** Who the data is for. One team, a business domain (eg. like equities, fixed income, real assets in asset management), or the whole firm.
+A usable map has four axes, though only three of them grade anything.
+- **Reach.** Who the data is for. One team, a business domain (eg. equities, fixed income, real assets in asset management), or the whole firm.
 - **Category.** What the data is about, so related things sit together. This could be the difference of reference, operational, derived/analytical and alternative data. This one doesn't grade anything, it just files the dataset for search. Leave it out and tier and reach still tell you whether to trust a dataset, but not what it is or how to find it.
 - **Expected quality.** What somebody has promised about the dataset, graded `tier A` to `tier C`.
 - **Monitored quality.** What the evidence shows: uptime, freshness, failing tests, history range, how many people query it. And **metadata coverage**, at both object and column level, which is the one most platforms skip and the one an agent leans on hardest when it picks a table. The tier is a claim, and this is what tests it.
 
-None of this is new territory. The *Open Data Contract Standard*[^1] defines schema, ownership and measured quality checks in machine-readable form, and *Apache Ossie*[^2] does the same for semantic models shared between BI tools. Neither one defines how broadly a dataset is meant to be relied on, or groups it by what it's about: reach and category are left to whoever adopts the standard. Medallion's[^3] bronze, silver, gold comes closer to a tier, but it's answering a different question, how refined data is rather than the business quality of the data itself, and in practice those two concerns don't sit on the same scale.
+None of this is new territory. The Open Data Contract Standard[^1] defines schema, ownership and measured quality checks in machine-readable form, and Apache Ossie[^2] does the same for semantic models shared between BI tools. Neither one defines how broadly a dataset is meant to be relied on, or groups it by what it's about: reach and category are left to whoever adopts the standard. Medallion's[^3] bronze, silver, gold comes closer to a tier, but it's answering a different question, how refined data is rather than the business quality of the data itself, and in practice those two concerns don't sit on the same scale.
 
 The three tiers are worth spelling out before the grid, since every cell in it carries one.
 - `tier A` - **Certified**: someone has signed something. Data contract, named owner, defined coverage, and an SLA that gets honoured at three in the morning.
@@ -25,7 +25,7 @@ Two axes carry most of the weight once you put them on a grid. Expected quality 
 
 | | Org-wide | Business domain | One team |
 |---|---|---|---|
-| `tier A` | **official positions, firm reporting** | capability benchmarks, risk inputs | rare, and usually over-built |
+| `tier A` | **official positions, firm reporting** | domain benchmarks, risk inputs | rare, and usually over-built |
 | `tier B` | widely used, never promised | **most modelled marts** | a team's monitored working set |
 | `tier C` | ungoverned, and everyone is using it | exploratory work on a strategy | **scratch models, ad hoc** |
 
@@ -55,6 +55,6 @@ Also, removing redundant or duplicate datasets is the cheapest way to make the r
 
 **The grid isn't the asset. The three questions behind it are: who the data is for, what's been promised, what's actually been delivered.** Ask those of every dataset and the wrong cells stop hiding on their own.
 
-[^1]: Open Data Contract Standard, maintained by the Bitol project under the Linux Foundation. <https://bitol-io.github.io/open-data-contract-standard/>
-[^2]: Apache Ossie (incubating), formerly the Open Semantic Interchange. <https://ossie.apache.org/>
-[^3]: Medallion architecture (bronze, silver, gold), as described by Databricks. <https://www.databricks.com/blog/what-is-medallion-architecture>
+[^1]: Open Data Contract Standard, maintained by the Bitol project under the Linux Foundation. [bitol-io.github.io](https://bitol-io.github.io/open-data-contract-standard/)
+[^2]: Apache Ossie (incubating), formerly the Open Semantic Interchange. [ossie.apache.org](https://ossie.apache.org/)
+[^3]: Medallion architecture (bronze, silver, gold), as described by Databricks. [databricks.com/blog](https://www.databricks.com/blog/what-is-medallion-architecture)
