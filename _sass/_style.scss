@@ -262,6 +262,16 @@ table {
 
   sup {
     margin-right: 0.2em;
+
+    &:target {
+      border-radius: 3px;
+      animation: footnote-highlight 2s ease-out;
+    }
+  }
+
+  .footnotes li:target {
+    border-radius: 3px;
+    animation: footnote-highlight 2s ease-out;
   }
 
   .footnotes {
@@ -270,6 +280,8 @@ table {
     border-top: 1px solid var(--color-border);
     font-family: $font-family-mono;
     font-size: 0.7em;
+    word-break: break-word;
+    overflow-wrap: anywhere;
     line-height: 1.6;
     color: var(--color-muted);
 
@@ -497,5 +509,14 @@ code {
 
   .theme-toggle-icon--moon {
     display: block;
+  }
+}
+
+@keyframes footnote-highlight {
+  from {
+    background: var(--color-link-hover-bg);
+  }
+  to {
+    background: transparent;
   }
 }
