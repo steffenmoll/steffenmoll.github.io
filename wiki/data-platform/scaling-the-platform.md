@@ -28,5 +28,6 @@ Scaling a data platform isn't mainly about data volume — most warehouses handl
 
 ## See also
 
+- [Dataset tiering & trust](./dataset-tiering-and-trust.md) — why only the top tier should require central approval as the number of datasets grows
 - [Organization & ownership](./organization-and-ownership.md) — the ownership model that has to hold as the org grows
 - [Data warehouse: performance & cost](../data-warehouse/performance-and-cost.md) — the cost side of scaling, which needs the same deliberate guardrails

@@ -30,6 +30,7 @@ A data platform is the system of tooling, process, and organization around the w
 - [Organization & ownership](./organization-and-ownership.md) — domains, data mesh, and what actually survives a reorg
 - [Tooling & architecture](./tooling-and-architecture.md) — build vs. buy, and the decisions that actually matter
 - [Governance & trust](./governance-and-trust.md) — data contracts, quality, and making data believable
+- [Dataset tiering & trust](./dataset-tiering-and-trust.md) — grading datasets by claimed vs. measured quality, and who gets to decide
 - [Scaling the platform](./scaling-the-platform.md) — what changes between one team and many
 
 ## See also

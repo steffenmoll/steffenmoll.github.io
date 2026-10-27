@@ -28,6 +28,7 @@ Trust in data isn't a feeling — it's the accumulated result of governance deci
 
 ## See also
 
+- [Dataset tiering & trust](./dataset-tiering-and-trust.md) — turning these contracts into a tier a dataset carries, and auditing it continuously
 - [Organization & ownership](./organization-and-ownership.md) — the ownership model governance has to support
 - [Data warehouse: governance & access](../data-warehouse/governance-and-access.md) — governance mechanics at the warehouse level
 - [Analytics engineering: semantic layer & metrics](../analytics-engineering/semantic-layer-and-metrics.md) — where inconsistent definitions become visible to end users
