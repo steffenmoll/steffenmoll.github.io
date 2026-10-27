@@ -98,7 +98,7 @@ Structure:
 - The example, which lands in the C/org-wide cell: a dataset the business treated as critical that had been deprecated and had stopped updating. Nobody had written down what it promised, so there was nothing for reality to contradict.
 - Close on the map being read by an agent rather than a human, so write the docs for the AI first. Last line lands on the map itself, no handoff.
 
-Form: ~920 words, one table, house prose otherwise, no em dashes.
+Form: ~920 words, one table, house prose otherwise, no em dashes. Tiers are always written "tier A", never bare "A", and set in monospace. Keep that convention in later posts.
 
 Avoid: don't re-run post 3's argument that AI makes platform rot visible. Leave rollout out, grading an existing estate is its own post. Don't let the axes crowd out the example.
 
