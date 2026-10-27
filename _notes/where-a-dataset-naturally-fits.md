@@ -21,7 +21,7 @@ None of this is new territory. The *Open Data Contract Standard*[^1] defines sch
 
 Two axes carry most of the weight once you put them on a grid. Expected quality down the side, reach across the top, and every dataset you own lands in exactly one cell.
 
-| | Org-wide | Business capability | One team |
+| | Org-wide | Business domain | One team |
 |---|---|---|---|
 | `tier A` | **official positions, firm reporting** | capability benchmarks, risk inputs | rare, and usually over-built |
 | `tier B` | widely used, never promised | **most modelled marts** | a team's monitored working set |
@@ -29,7 +29,7 @@ Two axes carry most of the weight once you put them on a grid. Expected quality 
 
 Most data should sit on the diagonal, and most of it does. A scratch model one analyst uses doesn't need an SLA. The official position data the whole firm reports on can't be a sandbox table. Expected quality rises with reach because the cost of being wrong rises with reach, and that correlation is what makes the map readable at a glance.
 
-The interesting datasets are the ones off the diagonal.
+**The interesting datasets are the ones off the diagonal.**
 
 Towards the top right you have over-built. A team-local dataset with a data contract and a pager rotation is governance spent where very little was at risk. That's wasteful rather than dangerous, and it usually means somebody got enthusiastic.
 
@@ -53,6 +53,6 @@ Also, removing redundant or duplicate datasets is the cheapest way to make the r
 
 **The grid isn't the asset. The three questions behind it are: who the data is for, what's been promised, what's actually been delivered.** Ask those of every dataset and the wrong cells stop hiding on their own.
 
-[^1]: **Open Data Contract Standard**, maintained by the Bitol project under the Linux Foundation. <https://bitol-io.github.io/open-data-contract-standard/>
-[^2]: **Apache Ossie** (incubating), formerly the Open Semantic Interchange. <https://ossie.apache.org/>
+[^1]: Open Data Contract Standard, maintained by the Bitol project under the Linux Foundation. <https://bitol-io.github.io/open-data-contract-standard/>
+[^2]: Apache Ossie (incubating), formerly the Open Semantic Interchange. <https://ossie.apache.org/>
 [^3]: Medallion architecture (bronze, silver, gold), as described by Databricks. <https://www.databricks.com/blog/what-is-medallion-architecture>
