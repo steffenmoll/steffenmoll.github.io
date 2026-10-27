@@ -2,7 +2,7 @@
 
 ## Series: Data platforms
 
-A four-part series on why data platforms don't solve the problems people buy them for, and what actually helps.
+An ongoing series on why data platforms don't solve the problems people buy them for, and what actually helps. Posts 1 to 4 are one arc; later posts build on it.
 
 Storytelling approach: promise and overdeliver, like Mark Rober — open with the claim, then earn it. 
 Keep posts within a 3 min read, but resulting in clear consise messages.
@@ -45,16 +45,62 @@ Solution: Define a framework for how to grade datasets, based on business metric
 
 Avoid: don't resolve this into a single "best practice," the point is that it's a real trade-off.
 
-### Post 4: Practical thoughts on data scaling
+### Post 4: Where a dataset naturally fits — status: drafted
+
+#### My original notes (kept)
 
 Angle: grounded, example-driven follow-up — what does dealing with the scaling problem actually look like.
 
-Key points:
-- Is bronze/silver/gold (e.g. Matillion's medallion pattern) practically sufficient, or does it fall short in practice?
-- NBIM as a reference case: raw → int → mrt, with dbt
-- Underlying platform rot gets worse — and more visible — once AI gets layered on top of it
+Two things needs to be in place:
+1. Define the landscape/draw the map: define the data platform framework
+2. Help AI and agents **navigate** the landscape: define business logic and rules
+
+**On the landscape:**
+- axis 1: set various quality tiers, eg. A, B, C.
+A: clear expectations: where the upper tier is business critical and has a defined SLA. has data contract. defined coverage.
+B: somewhat defined expectations: data being monitored, have certain test metrics, but no defiend expectations on downtime.
+C: undefined: sandbox data, not monitored, ad hoc
+-> in other words, this defines the expected quaity
+
+- axis 2: monitored quality
+uptime, metadata coverage (both on object - aka table, view, etc. - and column level), tests failing, freshness, content coverage, history/date range, usage/users, etc.
+
+- axis 3: target domain/audience: org-wide, sub-groups based on business capabilities (eg. Equities, Fixed Income), team
+
+- axis 4: content matter category: a way to group data into natural buckets as due to what the data is about. eg.
+
+**Navigating**
+MCPs and skills as helping tools to direct the AI in the right direction. These should be maintained centrally in the organisation, ensuring a consistent behaviour pattern.
+
+**Key points:**
+- Underlying platform rot gets worse — and more visible — once AI gets layered on top of it.
+- Documnent for the AI first, will actually read the docs, the human rarely will.
+- Less is more. The fewer competing datasets, the more accurate the AI will answer.
 
 Avoid: keep this concrete and example-led, it's the payoff post after three posts of framing.
+
+From an earlier version, dropped but worth remembering:
+- Is bronze/silver/gold (e.g. Matillion's medallion pattern) practically sufficient, or does it fall short in practice?
+- NBIM as a reference case: raw -> int -> mrt, with dbt
+
+#### Worked outline after grilling
+
+Title: Where a dataset naturally fits. Spine is the map/navigate analogy: this post draws the map, the navigation half is left for later without being teased.
+
+Claim: expected quality should rise with reach, and the datasets worth your attention are the ones where it doesn't.
+
+Structure:
+- Open on the part 3 trade-off, then state the two things needed: draw the map, then navigate it. This post is the map.
+- All four axes, in prose, one short paragraph each. Expected quality (A/B/C). Monitored quality (the thing that tests the claim). Reach (team, business capability, org-wide). Subject matter (filing, not grading).
+- One matrix, expected quality down the side against reach across the top, cells holding the kind of dataset that naturally lands there. Header row in monospace.
+- The diagonal is the normal case. Below it is over-built governance, wasteful but harmless. Above it is the damage, and it's post 3's governance by obscurity with coordinates.
+- Rules that keep the map honest: declared cadence, no monitoring means a hard cap at C, owner proposes and only A needs data ops sign-off, sustained contradiction proposes a move either way.
+- The example, which lands in the C/org-wide cell: a dataset the business treated as critical that had been deprecated and had stopped updating. Nobody had written down what it promised, so there was nothing for reality to contradict.
+- Close on the map being read by an agent rather than a human, so write the docs for the AI first. Last line lands on the map itself, no handoff.
+
+Form: ~920 words, one table, house prose otherwise, no em dashes.
+
+Avoid: don't re-run post 3's argument that AI makes platform rot visible. Leave rollout out, grading an existing estate is its own post. Don't let the axes crowd out the example.
 
 ### Post 5: AI is amplifying everything
 
@@ -67,6 +113,8 @@ Key Points:
 Claim: A organizatinos AI skill instructions is the most important asset to be future proof.
 
 Solution: Use AI to enforce institutial guidelines to create organized platform, rather than clutter
+
+Inherits from post 4: MCPs and skills as the tools that point agents at the right data, maintained centrally so behaviour stays consistent. Post 4 ends on why the labels need to be machine-readable; this post owns the machinery.
 
 ## Idea bank (unsorted, not yet assigned to a post)
 
