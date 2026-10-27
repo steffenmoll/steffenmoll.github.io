@@ -11,9 +11,9 @@ Part 3 left a trade-off open: how much governance, and where to spend it. Making
 A usable map has four axes.
 
 - **Expected quality.** What somebody has promised about the dataset. Three tiers is enough:
-  - A: someone has signed something. Data contract, named owner, defined coverage, and an SLA that gets honoured at three in the morning.
-  - B: someone is watching. Tests run and monitoring exists, but nobody has promised it will be there on Monday.
-  - C: nothing has been promised at all. Sandbox, ad hoc, use at your own risk.
+  - `tier A`: someone has signed something. Data contract, named owner, defined coverage, and an SLA that gets honoured at three in the morning.
+  - `tier B`: someone is watching. Tests run and monitoring exists, but nobody has promised it will be there on Monday.
+  - `tier C`: nothing has been promised at all. Sandbox, ad hoc, use at your own risk.
 - **Monitored quality.** What the evidence shows: uptime, freshness, failing tests, history range, how many people query it. And **metadata coverage**, at both object and column level, which is the one most platforms skip and the one an agent leans on hardest when it picks a table. The tier is a claim, and this is what tests it.
 - **Reach.** Who the data is for. One team, a business capability like equities or fixed income, or the whole firm.
 - **Subject matter.** What the data is about, so related things sit together. This one is filing rather than grading, and it does less work than the other three, but a map without it is hard to read.
@@ -22,9 +22,9 @@ Two of those axes carry most of the weight once you put them on a grid. Expected
 
 | | Org-wide | Business capability | One team |
 |---|---|---|---|
-| **A** | official positions, firm reporting | capability benchmarks, risk inputs | rare, and usually over-built |
-| **B** | widely used, never promised | most modelled marts | a team's monitored working set |
-| **C** | ungoverned, and everyone is using it | exploratory work on a strategy | notebooks, scratch models, ad hoc |
+| `tier A` | official positions, firm reporting | capability benchmarks, risk inputs | rare, and usually over-built |
+| `tier B` | widely used, never promised | most modelled marts | a team's monitored working set |
+| `tier C` | ungoverned, and everyone is using it | exploratory work on a strategy | notebooks, scratch models, ad hoc |
 
 Most data should sit on the diagonal, and most of it does. A scratch model one analyst uses doesn't need an SLA. The official position data the whole firm reports on can't be a sandbox table. Expected quality rises with reach because the cost of being wrong rises with reach, and that correlation is what makes the map readable at a glance.
 
@@ -32,11 +32,11 @@ The interesting datasets are the ones off the diagonal.
 
 Towards the top right you have over-built. A team-local dataset with a data contract and a pager rotation is governance spent where very little was at risk. That's wasteful rather than dangerous, and it usually means somebody got enthusiastic.
 
-Towards the bottom left is where the damage lives. A dataset the whole firm leans on, sitting at C, with nobody's name on it and no monitoring. Part 3 called this governance by obscurity. It survives because nobody has gone looking, not because it works.
+Towards the bottom left is where the damage lives. A dataset the whole firm leans on, sitting at `tier C`, with nobody's name on it and no monitoring. Part 3 called this governance by obscurity. It survives because nobody has gone looking, not because it works.
 
-A few rules keep the map honest. The declared cadence is the cheapest of them: a dataset that says "expected daily" and last updated in March needs no SLA and no governance forum to tell you something is wrong. Monitoring isn't optional above C either, because with no instrumentation there's no evidence, so an uninstrumented dataset can't hold B or A however well built it is. New datasets start at C, which is accurate. Nobody has promised anything about them yet.
+A few rules keep the map honest. The declared cadence is the cheapest of them: a dataset that says "expected daily" and last updated in March needs no SLA and no governance forum to tell you something is wrong. Monitoring isn't optional above `tier C` either, because with no instrumentation there's no evidence, so an uninstrumented dataset can't hold `tier B` or `tier A` however well built it is. New datasets start at `tier C`, which is accurate. Nobody has promised anything about them yet.
 
-The owning team proposes where its dataset sits. Only A needs sign-off, from a data ops team, because A is the one tier where somebody has to answer for a promise. When the monitoring contradicts the claim for longer than the dataset's own update cadence, the dataset gets proposed for a move, in either direction.
+The owning team proposes where its dataset sits. Only `tier A` needs sign-off, from a data ops team, because it's the only tier that comes with a promise somebody has to answer for. When the monitoring contradicts the claim for longer than the dataset's own update cadence, the dataset gets proposed for a move, in either direction.
 
 The bottom left corner isn't hypothetical.
 
