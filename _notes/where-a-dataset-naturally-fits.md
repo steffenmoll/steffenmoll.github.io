@@ -17,7 +17,7 @@ A usable map has four axes.
   - `tier C` - **Best effort**: nothing has been promised at all. Sandbox, ad hoc, use at your own risk.
 - **Monitored quality.** What the evidence shows: uptime, freshness, failing tests, history range, how many people query it. And **metadata coverage**, at both object and column level, which is the one most platforms skip and the one an agent leans on hardest when it picks a table. The tier is a claim, and this is what tests it.
 
-None of this is new territory. The Open Data Contract Standard[^1] defines schema, ownership and measured quality checks in machine-readable form, and Apache Ossie[^2] does the same for semantic models shared between BI tools. Neither one defines how broadly a dataset is meant to be relied on, or groups it by what it's about: reach and category are left to whoever adopts the standard. Medallion's bronze, silver, gold comes closer to a tier, but it's answering a different question, how refined data is rather than the business quality of the data itself, and in practice those two concerns don't sit on the same scale.
+None of this is new territory. The *Open Data Contract Standard*[^1] defines schema, ownership and measured quality checks in machine-readable form, and *Apache Ossie*[^2] does the same for semantic models shared between BI tools. Neither one defines how broadly a dataset is meant to be relied on, or groups it by what it's about: reach and category are left to whoever adopts the standard. Medallion's[^3] bronze, silver, gold comes closer to a tier, but it's answering a different question, how refined data is rather than the business quality of the data itself, and in practice those two concerns don't sit on the same scale.
 
 Two axes carry most of the weight once you put them on a grid. Expected quality down the side, reach across the top, and every dataset you own lands in exactly one cell.
 
@@ -53,5 +53,6 @@ Also, removing redundant or duplicate datasets is the cheapest way to make the r
 
 **The grid isn't the asset. The three questions behind it are: who the data is for, what's been promised, what's actually been delivered.** Ask those of every dataset and the wrong cells stop hiding on their own.
 
-[^1]: Open Data Contract Standard, maintained by the Bitol project under the Linux Foundation. <https://bitol-io.github.io/open-data-contract-standard/>
-[^2]: Apache Ossie (incubating), formerly the Open Semantic Interchange. <https://ossie.apache.org/>
+[^1]: **Open Data Contract Standard**, maintained by the Bitol project under the Linux Foundation. <https://bitol-io.github.io/open-data-contract-standard/>
+[^2]: **Apache Ossie** (incubating), formerly the Open Semantic Interchange. <https://ossie.apache.org/>
+[^3]: Medallion architecture (bronze, silver, gold), as described by Databricks. <https://www.databricks.com/blog/what-is-medallion-architecture>
