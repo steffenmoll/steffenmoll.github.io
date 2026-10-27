@@ -10,7 +10,7 @@ Part 3 left a trade-off open: how much governance, and where to spend it. Making
 
 A usable map has four axes.
 - **Reach.** Who the data is for. One team, a business capability (eg. like equities, fixed income), or the whole firm.
-- **Subject matter.** What the data is about, so related things sit together. This could be the difference of reference, operational, derived/analytical and alternative. This one is filing rather than grading, and it does less work than the other three, but a map without it is hard to read.
+- **Subject matter.** What the data is about, so related things sit together. This could be the difference of reference, operational, derived/analytical and alternative data. This one is filing rather than grading, and it does less work than the other three, but a map without it is hard to read.
 - **Expected quality.** What somebody has promised about the dataset. Three tiers is enough:
   - `tier A`: someone has signed something. Data contract, named owner, defined coverage, and an SLA that gets honoured at three in the morning.
   - `tier B`: someone is watching. Tests run and monitoring exists, but nobody has promised it will be there on Monday.
