@@ -259,6 +259,42 @@ table {
       padding-left: 1.2em;
     }
   }
+
+  sup {
+    margin-right: 0.2em;
+  }
+
+  .footnotes {
+    margin-top: 3em;
+    padding-top: 1.5em;
+    border-top: 1px solid var(--color-border);
+    font-family: $font-family-mono;
+    font-size: 0.7em;
+    line-height: 1.6;
+    color: var(--color-muted);
+
+    ol {
+      padding-left: 1.2em;
+      margin: 0;
+    }
+
+    li {
+      margin: 0 0 0.6em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    p {
+      display: inline;
+      margin: 0;
+    }
+
+    a {
+      color: var(--color-subtext);
+    }
+  }
 }
 
 hr {
