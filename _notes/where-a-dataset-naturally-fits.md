@@ -17,9 +17,9 @@ A usable map has four axes, though only three of them grade anything.
 None of this is new territory. The Open Data Contract Standard[^1] defines schema, ownership and measured quality checks in machine-readable form, and Apache Ossie[^2] does the same for semantic models shared between BI tools. Neither one defines how broadly a dataset is meant to be relied on, or groups it by what it's about: reach and category are left to whoever adopts the standard. Medallion's[^3] bronze, silver, gold comes closer to a tier, but it's answering a different question, how refined data is rather than the business quality of the data itself, and in practice those two concerns don't sit on the same scale.
 
 The three tiers are worth spelling out before the grid, since every cell in it carries one.
-- `tier A` - **Certified**: someone has signed something. Data contract, named owner, defined coverage, and an SLA that gets honoured at three in the morning.
-- `tier B` - **Supported**: someone is watching. Tests run and monitoring exists, but nobody has promised it will be there on Monday.
-- `tier C` - **Best effort**: nothing has been promised at all. Sandbox, ad hoc, use at your own risk.
+- **Certified** - `tier A`: someone has signed something. Data contract, named owner, defined coverage, and an SLA that gets honoured at three in the morning.
+- **Supported** - `tier B`: someone is watching. Tests run and monitoring exists, but nobody has promised it will be there on Monday.
+- **Best effort** - `tier C`:  nothing has been promised at all. Sandbox, ad hoc, use at your own risk.
 
 Two axes carry most of the weight once you put them on a grid. Expected quality down the side, reach across the top, and every dataset you own lands in exactly one cell.
 
