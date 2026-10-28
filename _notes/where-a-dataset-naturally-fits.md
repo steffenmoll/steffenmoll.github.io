@@ -39,7 +39,9 @@ Towards the top right you have over-built. A team-local dataset with a data cont
 
 Towards the bottom left is where the damage lives. A dataset the whole firm leans on, sitting at `tier C`, with nobody's name on it and no monitoring. Part 3 called this governance by obscurity. It survives because nobody has gone looking, not because it works.
 
-A few rules keep the map honest. The declared cadence is the cheapest of them: a dataset that says "expected daily" and last updated in March needs no SLA and no governance forum to tell you something is wrong. Monitoring isn't optional above `tier C` either, because with no instrumentation there's no evidence, so an uninstrumented dataset can't hold `tier B` or `tier A` however well built it is. New datasets start at `tier C`, which is accurate. Nobody has promised anything about them yet.
+A few rules keep the map honest. The declared cadence is the cheapest of them: a dataset that says "expected daily" and last updated in March needs no SLA and no governance forum to tell you something is wrong. 
+
+Monitoring isn't optional above `tier C` either, because with no instrumentation there's no evidence, so an uninstrumented dataset can't hold `tier B` or `tier A` however well built it is. New datasets start at `tier C`, which is accurate. Nobody has promised anything about them yet.
 
 The owning team proposes where its dataset sits. Only `tier A` needs sign-off, from a data ops team, because it's the only tier that comes with a promise somebody has to answer for. When the monitoring contradicts the claim for longer than the dataset's own update cadence, the dataset gets proposed for a move, in either direction.
 
