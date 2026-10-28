@@ -14,7 +14,9 @@ A usable map has four axes, though only three of them grade anything.
 - **Expected quality.** What somebody has promised about the dataset, graded `tier A` to `tier C`.
 - **Monitored quality.** What the evidence shows: uptime, freshness, failing tests, history range, how many people query it. And **metadata coverage**, at both object and column level, which is the one most platforms skip and the one an agent leans on hardest when it picks a table. The tier is a claim, and this is what tests it.
 
-None of this is new territory. The Open Data Contract Standard[^1] defines schema, ownership and measured quality checks in machine-readable form, and Apache Ossie[^2] does the same for semantic models shared between BI tools. Neither one defines how broadly a dataset is meant to be relied on, or groups it by what it's about: reach and category are left to whoever adopts the standard. Medallion's[^3] bronze, silver, gold comes closer to a tier, but it's answering a different question, how refined data is rather than the business quality of the data itself, and in practice those two concerns don't sit on the same scale.
+None of this is new territory. The Open Data Contract Standard[^1] defines schema, ownership and measured quality checks in machine-readable form, and Apache Ossie[^2] does the same for semantic models shared between BI tools. Neither one defines how broadly a dataset is meant to be relied on, or groups it by what it's about: reach and category are left to whoever adopts the standard. 
+
+Medallion's[^3] bronze, silver, gold comes closer to a tier, but it's answering a different question, how refined data is rather than the business quality of the data itself, and in practice those two concerns don't sit on the same scale.
 
 The three tiers are worth spelling out before the grid, since every cell in it carries one.
 - **Certified** - `tier A`: someone has signed something. Data contract, named owner, defined coverage, and an SLA that gets honoured at three in the morning.
