@@ -6,7 +6,7 @@ tags: [data platform, data governance, ai]
 
 *This is the fourth post on data platforms. Read <a class="internal-link" href="/governance-by-obscurity">part 3</a> if you haven't already.*
 
-Part 3 left a trade-off open: how much governance, and where to spend it. Making that call dataset by dataset takes two things. You need a map of the terrain, and you need a way for people and agents to navigate it. This post is about drawing the map, because you can't give anyone directions across ground nobody has surveyed.
+**You need a map of the terrain, and you need a way for people and agents to navigate it.** This post is about drawing the map, because you can't give anyone directions across ground nobody has surveyed.
 
 A usable map has four axes, though only three of them grade anything.
 - **Reach.** Who the data is for. One team, a business domain (eg. equities, fixed income, real assets in asset management), or the whole firm.
