@@ -1,10 +1,8 @@
 ---
-title: "Where a dataset naturally fits"
+title: "Mapping datasets by reach and promises"
 date: 2026-10-27
 tags: [data platform, data governance, ai]
 ---
-
-*This is the fourth post on data platforms. Read <a class="internal-link" href="/governance-by-obscurity">part 3</a> if you haven't already.*
 
 **You need a map of the data terrain, and you need a way for people and agents to navigate to the right dataset.** This post is about drawing the map, because you can't give anyone directions across ground nobody has surveyed.
 
